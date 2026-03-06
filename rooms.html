@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Номера - Mountain Escape</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">Mountain<span>Escape</span></a>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="rooms.html" class="active">Номера</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Наши номера</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a> / <span>Номера</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="rooms-grid-section">
+        <div class="container">
+            <div class="rooms-grid">
+                <!-- Карточка номера 1 -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=500" alt="Стандарт">
+                    </div>
+                    <div class="room-info">
+                        <h3>Стандарт</h3>
+                        <p class="room-price">от 5 000 ₽/ночь</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-wifi"></i> Wi-Fi</li>
+                            <li><i class="fas fa-tv"></i> Телевизор</li>
+                            <li><i class="fas fa-shower"></i> Душ</li>
+                        </ul>
+                        <button class="btn btn-primary book-btn" data-room="Стандарт">Забронировать</button>
+                    </div>
+                </div>
+
+                <!-- Карточка номера 2 -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?w=500" alt="Люкс">
+                    </div>
+                    <div class="room-info">
+                        <h3>Люкс</h3>
+                        <p class="room-price">от 8 500 ₽/ночь</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-wifi"></i> Wi-Fi</li>
+                            <li><i class="fas fa-tv"></i> Smart TV</li>
+                            <li><i class="fas fa-hot-tub"></i> Джакузи</li>
+                        </ul>
+                        <button class="btn btn-primary book-btn" data-room="Люкс">Забронировать</button>
+                    </div>
+                </div>
+
+                <!-- Карточка номера 3 -->
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500" alt="Президентский">
+                    </div>
+                    <div class="room-info">
+                        <h3>Президентский</h3>
+                        <p class="room-price">от 15 000 ₽/ночь</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-wifi"></i> Wi-Fi</li>
+                            <li><i class="fas fa-utensils"></i> Завтрак</li>
+                            <li><i class="fas fa-spa"></i> SPA-доступ</li>
+                        </ul>
+                        <button class="btn btn-primary book-btn" data-room="Президентский">Забронировать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно бронирования -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Бронирование номера</h2>
+            <form id="bookingForm">
+                <input type="hidden" id="selectedRoom">
+                <div class="form-group">
+                    <label>Ваше имя:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Телефон:</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label>Дата заезда:</label>
+                    <input type="date" id="checkin" required>
+                </div>
+                <div class="form-group">
+                    <label>Дата выезда:</label>
+                    <input type="date" id="checkout" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <!-- такой же как на главной -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Mountain Escape</h4>
+                    <p>Уютный отель в сердце гор для тех, кто ценит комфорт и природу</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> info@mountain-escape.ru</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Соцсети</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mountain Escape. Все права защищены</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
